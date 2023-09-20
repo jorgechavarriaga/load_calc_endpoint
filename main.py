@@ -93,7 +93,7 @@ class LoanCalcHandler(BaseHTTPRequestHandler):
             self.wfile.write(response_json.encode('utf-8'))
 
 
-def run(server_class=HTTPServer, handler_class=LoanCalcHandler, port=8888):
+def run(server_class=HTTPServer, handler_class=LoanCalcHandler, port=8080):
     server_address = ('', port)
     httpd = server_class(server_address, handler_class)
     print(f'Starting server on port {port}...')
